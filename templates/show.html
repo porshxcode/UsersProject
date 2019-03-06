@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+        <a href="/userpage">Home</a><br><br> <br>
+    <h1>USER {{user_data["idusers"]}}</h1>
+    <p> Full Name:  {{user_data ["first_name"]}} {{ user_data ["last_name"] }} <br>
+        Email: {{user_data ["email"]}}<br>
+        Created On: {{user_data ["created_at"]}}<br>
+        Updated Last On: {{user_data ["updated_at"]}}<br>
+    </p>
+    
+    <a href="show_edit/{{user_data['idusers']}}" method="POST"> EDIT</a>
+   <a href="/userpage/{{user_data['idusers']}}/destroy" method="POST">DELETE</a>
+
+</body>
+</html>
